@@ -1,0 +1,18 @@
+{
+  "name": "js-pratique",
+  "version": "1.0.0",
+  "description": "Exercices JavaScript avec tests automatiques",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:bloc1": "jest 01-variables",
+    "test:bloc2": "jest 02-booleens",
+    "test:bloc3": "jest 03-functions",
+    "test:bloc4": "jest 04-objects",
+    "test:bloc5": "jest 05-tableaux",
+    "test:bloc6": "jest 06-boucles"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
