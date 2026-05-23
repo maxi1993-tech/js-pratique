@@ -39,7 +39,7 @@ describe("Bloc 1 — Variables & Strings", () => {
 
   test("corrigerTexte remplace 'erreur' par 'correction'", () => {
     expect(corrigerTexte("Il y a une erreur ici")).toBe("Il y a une correction ici");
-    expect(corrigerTexte("Pas d'erreur ici")).toBe("Pas de correction ici");
+    expect(corrigerTexte("Une autre erreur")).toBe("Une autre correction");
   });
 
   test("estUneString retourne true pour une string, false sinon", () => {

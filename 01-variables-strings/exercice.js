@@ -11,8 +11,10 @@
 // Retourne un message de bienvenue en utilisant un template literal.
 // Exemple : direBonjour("Alice") → "Bonjour, Alice !"
 function direBonjour(prenom) {
-  // TODO : utilise un template literal
+  return `Bonjour, ${prenom} !`
 }
+
+console.log(direBonjour("max"));
 
 
 // EXERCICE 2
@@ -20,7 +22,7 @@ function direBonjour(prenom) {
 // Exemple : donnerType(42) → "number"
 // Exemple : donnerType("hello") → "string"
 function donnerType(valeur) {
-  // TODO : utilise typeof
+  return typeof (valeur);
 }
 
 
@@ -28,7 +30,7 @@ function donnerType(valeur) {
 // Retourne la string en majuscules, sans espaces au début ni à la fin.
 // Exemple : nettoyerEtMajuscules("  bonjour  ") → "BONJOUR"
 function nettoyerEtMajuscules(texte) {
-  // TODO : combine .trim() et .toUpperCase()
+  return (texte.trim().toUpperCase());
 }
 
 
@@ -37,7 +39,7 @@ function nettoyerEtMajuscules(texte) {
 // Exemple : contient("JavaScript est fun", "fun") → true
 // Exemple : contient("JavaScript est fun", "Python") → false
 function contient(phrase, mot) {
-  // TODO : utilise .includes()
+  return (phrase.includes(mot));
 }
 
 
@@ -45,7 +47,7 @@ function contient(phrase, mot) {
 // Retourne les 3 premiers caractères de la string.
 // Exemple : troiPremiersCaracteres("Bonjour") → "Bon"
 function troisPremiersCaracteres(texte) {
-  // TODO : utilise .slice()
+  return texte.slice(0, 3);
 }
 
 
@@ -53,7 +55,7 @@ function troisPremiersCaracteres(texte) {
 // Remplace le mot "erreur" par "correction" dans le texte.
 // Exemple : corrigerTexte("Il y a une erreur ici") → "Il y a une correction ici"
 function corrigerTexte(texte) {
-  // TODO : utilise .replace()
+  return (texte.replace("erreur", "correction"));
 }
 
 
@@ -62,7 +64,7 @@ function corrigerTexte(texte) {
 // Exemple : estUneString("hello") → true
 // Exemple : estUneString(42) → false
 function estUneString(valeur) {
-  // TODO : utilise typeof
+  return typeof(valeur) === "string";
 }
 
 
