@@ -10,7 +10,7 @@
 // Retourne le reste de la division de a par b.
 // Exemple : reste(10, 3) → 1
 function reste(a, b) {
-  // TODO
+  return a % b;
 }
 
 
@@ -18,7 +18,7 @@ function reste(a, b) {
 // Retourne true si le nombre est pair, false sinon.
 // Exemple : estPair(4) → true  |  estPair(7) → false
 function estPair(nombre) {
-  // TODO
+  return nombre % 2 === 0;
 }
 
 
@@ -27,7 +27,7 @@ function estPair(nombre) {
 // Assure-toi que le calcul est bien numérique.
 // Exemple : additionner("5", "3") → 8 (number, pas "53")
 function additionner(a, b) {
-  // TODO
+  return Number(a) + Number(b);
 }
 
 
@@ -35,7 +35,7 @@ function additionner(a, b) {
 // Retourne true si a est strictement égal à b (utilise ===).
 // Exemple : sontEgaux(5, 5) → true  |  sontEgaux(5, "5") → false
 function sontEgaux(a, b) {
-  // TODO
+  return a === b;
 }
 
 
@@ -46,7 +46,15 @@ function sontEgaux(a, b) {
 // >= 50 → "Passable"
 // < 50  → "Insuffisant"
 function mention(note) {
-  // TODO : utilise if / else if / else
+  if (note >= 90) {
+    return "Excellent";
+  } else if (note >= 70) {
+    return "Bien";
+  } else if (note >= 50) {
+    return "Passable";
+  } else {
+    return "Insuffisant";
+  }
 }
 
 
@@ -55,7 +63,7 @@ function mention(note) {
 // Utilise l'opérateur ternaire.
 // Exemple : majorite(20) → "majeur"  |  majorite(15) → "mineur"
 function majorite(age) {
-  // TODO : utilise ? :
+  return age >= 18 ? "majeur" : "mineur";
 }
 
 
@@ -64,7 +72,24 @@ function majorite(age) {
 // Si le numéro est invalide, retourne "Inconnu".
 // Utilise switch.
 function nomDuJour(numero) {
-  // TODO : utilise switch / case / default
+  switch (numero) {
+    case 1:
+      return "Lundi";
+    case 2:
+      return "Mardi";
+    case 3:
+      return "Mercredi";
+    case 4:
+      return "Jeudi";
+    case 5:
+      return "Vendredi";
+    case 6:
+      return "Samedi";
+    case 7:
+      return "Dimanche";
+    default:
+      return "Inconnu";
+  }
 }
 
 
@@ -72,7 +97,7 @@ function nomDuJour(numero) {
 // Retourne le nombre arrondi à l'entier inférieur.
 // Exemple : arrondir(4.9) → 4
 function arrondir(nombre) {
-  // TODO : utilise Math.floor()
+  return Math.floor(nombre);
 }
 
 
@@ -80,7 +105,7 @@ function arrondir(nombre) {
 // Retourne la valeur absolue.
 // Exemple : valeurAbsolue(-7) → 7
 function valeurAbsolue(nombre) {
-  // TODO : utilise Math.abs()
+  return Math.abs(nombre);
 }
 
 
