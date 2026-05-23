@@ -11,7 +11,7 @@
 // Écris une fonction classique qui retourne le double d'un nombre.
 // Exemple : doubler(5) → 10
 function doubler(nombre) {
-  // TODO
+  return nombre * 2;
 }
 
 
@@ -19,7 +19,7 @@ function doubler(nombre) {
 // Écris une arrow function qui retourne le carré d'un nombre.
 // Exemple : carre(4) → 16
 const carre = (nombre) => {
-  // TODO
+  return nombre * nombre;
 };
 
 
@@ -29,7 +29,7 @@ const carre = (nombre) => {
 // Exemple : estPositif(-3) → false
 // Exemple : estPositif(0) → false
 function estPositif(nombre) {
-  // TODO
+  return nombre > 0;
 }
 
 
@@ -39,7 +39,7 @@ function estPositif(nombre) {
 // Exemple : somme(1, 2, 3) → 6
 // Exemple : somme(1, 2) → 3
 function somme(a = 0, b = 0, c = 0) {
-  // TODO
+  return a + b + c;
 }
 
 
@@ -50,7 +50,9 @@ function somme(a = 0, b = 0, c = 0) {
 //   const tripler = multiplierPar(3);
 //   tripler(5) → 15
 function multiplierPar(facteur) {
-  // TODO : retourne une fonction qui prend un nombre et retourne nombre * facteur
+  return function(nombre) {
+    return nombre * facteur;
+  }
 }
 
 
@@ -59,7 +61,11 @@ function multiplierPar(facteur) {
 // Exemple : max(3, 7) → 7
 // Exemple : max(9, 2) → 9
 const max = (a, b) => {
-  // TODO : sans utiliser Math.max()
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
 };
 
 
