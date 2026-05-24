@@ -10,7 +10,7 @@
 // Retourne le premier élément du tableau.
 // Exemple : premier(["a", "b", "c"]) → "a"
 function premier(tableau) {
-  // TODO
+  return tableau[0];
 }
 
 
@@ -19,7 +19,7 @@ function premier(tableau) {
 // Exemple : dernier(["a", "b", "c"]) → "c"
 // Astuce : utilise .length
 function dernier(tableau) {
-  // TODO
+  return tableau[tableau.length - 1];
 }
 
 
@@ -27,7 +27,8 @@ function dernier(tableau) {
 // Ajoute l'élément à la fin du tableau et retourne le tableau modifié.
 // Exemple : ajouterFin(["a", "b"], "c") → ["a", "b", "c"]
 function ajouterFin(tableau, element) {
-  // TODO : utilise .push()
+  tableau.push(element);
+  return tableau;
 }
 
 
@@ -35,7 +36,7 @@ function ajouterFin(tableau, element) {
 // Supprime le dernier élément et retourne l'élément supprimé.
 // Exemple : supprimerFin(["a", "b", "c"]) → "c"
 function supprimerFin(tableau) {
-  // TODO : utilise .pop()
+  return tableau.pop();
 }
 
 
@@ -43,7 +44,7 @@ function supprimerFin(tableau) {
 // Retourne true si la valeur est dans le tableau, false sinon.
 // Exemple : contient(["a", "b", "c"], "b") → true
 function contient(tableau, valeur) {
-  // TODO : utilise .includes()
+  return tableau.includes(valeur);
 }
 
 
@@ -52,7 +53,7 @@ function contient(tableau, valeur) {
 // Si elle n'est pas trouvée, retourne -1.
 // Exemple : trouverIndex(["a", "b", "c"], "b") → 1
 function trouverIndex(tableau, valeur) {
-  // TODO : utilise .indexOf()
+  return tableau.indexOf(valeur);
 }
 
 
@@ -61,7 +62,7 @@ function trouverIndex(tableau, valeur) {
 // Ne modifie pas le tableau original.
 // Exemple : extraire(["a","b","c","d"], 1, 3) → ["b","c"]
 function extraire(tableau, debut, fin) {
-  // TODO : utilise .slice()
+  return tableau.slice(debut, fin);
 }
 
 
@@ -69,7 +70,7 @@ function extraire(tableau, debut, fin) {
 // Retourne les éléments du tableau joints par le séparateur donné.
 // Exemple : joindre(["Bonjour", "monde"], " ") → "Bonjour monde"
 function joindre(tableau, separateur) {
-  // TODO : utilise .join()
+  return tableau.join(separateur);
 }
 
 
@@ -78,8 +79,7 @@ function joindre(tableau, separateur) {
 // Ne modifie PAS le tableau original.
 // Exemple : inverser([1, 2, 3]) → [3, 2, 1]
 function inverser(tableau) {
-  // TODO : utilise le spread [...tableau] puis .reverse()
-  // Pourquoi le spread ? Parce que .reverse() modifie le tableau original.
+  return [...tableau].reverse();
 }
 
 
@@ -88,7 +88,8 @@ function inverser(tableau) {
 // Exemple :
 //   decomposer([1, 2, 3, 4]) → { premier: 1, deuxieme: 2, reste: [3, 4] }
 function decomposer(tableau) {
-  // TODO : utilise la déstructuration avec rest syntax
+  const [premier, deuxieme, ...reste] = tableau;
+  return { premier, deuxieme, reste };
 }
 
 
